@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate random numbers with RandomLab.">
+    <title>RandomLab - Random Number Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#">RandomLab<span>.</span></a>
+        <span class="tag">FREE NUMBER TOOL</span>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">SIMPLE. RANDOM. INSTANT.</p>
+            <h1>Random number<br>generator</h1>
+            <p class="subtitle">
+                Choose a range and let RandomLab pick a number for you.
+            </p>
+        </section>
+
+        <section class="generator card">
+            <div class="field-row">
+                <div class="field">
+                    <label for="minimum">Minimum number</label>
+                    <input id="minimum" type="number" step="1"
+                           value="1" placeholder="e.g. 1">
+                </div>
+
+                <div class="field">
+                    <label for="maximum">Maximum number</label>
+                    <input id="maximum" type="number" step="1"
+                           value="100" placeholder="e.g. 100">
+                </div>
+            </div>
+
+            <button id="generate" class="primary-button">
+                Generate number <span aria-hidden="true">↗</span>
+            </button>
+
+            <p id="message" class="message" role="status"
+               aria-live="polite"></p>
+
+            <div class="result-area">
+                <p class="result-label">YOUR RANDOM NUMBER</p>
+                <output id="result" class="result">—</output>
+                <button id="copy" class="secondary-button" disabled>
+                    Copy result
+                </button>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Recent history</h2>
+                    <p>Your latest 10 results.</p>
+                </div>
+                <button id="clear-history" class="text-button">
+                    Clear history
+                </button>
+            </div>
+
+            <ul id="history" class="history-list">
+                <li class="empty-state">Your results will appear here.</li>
+            </ul>
+        </section>
+
+        <footer>
+            Made for curious minds. <span>RandomLab © 2026</span>
+        </footer>
+    </main>
+</body>
+</html>
